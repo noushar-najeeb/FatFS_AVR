@@ -59,15 +59,15 @@ I ported the code and build it with no errors. But it got some problems. Any hel
     ```
     ISR(TIMER0_COMPA_vect)
     {
-    	//For Timing operations of the File system
-	if(Timer1>0)
-	{
-		Timer1--;
-	}
-	if(Timer2>0)
-	{
-		Timer2--;
-	}
+    		//For Timing operations of the File system
+		if(Timer1>0)
+		{
+			Timer1--;
+		}
+		if(Timer2>0)
+		{
+			Timer2--;
+		}
     }
     ```
     Whenever Timer1 or Timer2 values have been changed, we need to decrement it at 100Hz rate

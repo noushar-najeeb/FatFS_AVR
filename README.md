@@ -43,3 +43,14 @@ I ported the code and build it with no errors. But it got some problems. Any hel
 
     #define FF_FS_NORTC		1
 
+7.  Created a timer interrupt for 100HZ timer opertion.
+
+    void start_timer(void)
+    {
+	    Start 100Hz system timer with TC0 */
+	    OCR0A = ((F_CPU / (2*1024) / 100) - 1;
+	    TCCR0A = (1<<WGM01);//CTC mode
+	    TCCR0B = 0b101; //Prescale = clock/1024
+        TIMSK0 = (1<<OCIE0A);//Timer/Counter0 Output Compare Match A Interrupt Enable
+	    sei();
+    }

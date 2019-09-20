@@ -48,14 +48,14 @@ I ported the code and build it with no errors. But it got some problems. Any hel
     void start_timer(void)
     {
 	    /*Start 100Hz system timer with TC0 */
-	    OCR0A = ((F_CPU / (2*1024) / 100) - 1;
-	    TCCR0A = (1<<WGM01);//CTC mode
-	    TCCR0B = 0b101; //Prescale = clock/1024
+	    //TCCR0A = (1<<WGM01);//CTC mode
+	    TCCR0A=0;
+	    TCCR0B = 0x05; //Prescale = clock/1024
+	    OCR0A=78;//For 100Hz
 	    TIMSK0 = (1<<OCIE0A);//Timer/Counter0 Output Compare Match A Interrupt Enable
 	    sei();
-    }
     ```
-    And the ISR
+    And the ISR,
     ```
     ISR(TIMER0_COMPA_vect)
     {
@@ -72,4 +72,4 @@ I ported the code and build it with no errors. But it got some problems. Any hel
     ```
     Whenever Timer1 or Timer2 values have been changed, we need to decrement it at 100Hz rate
 
-8.  adde
+8.  Added Hardware specific functions on mmc_avr_spi.c

@@ -1,5 +1,5 @@
 # FatFS_AVR
-Porting FatFS library for ATmega 2560
+Porting elm-chan's FatFS library for ATmega 2560
 
 Coding Environment:- AtmelStudio 7.0
 
@@ -7,5 +7,23 @@ I have used the FatFS library in an STM32 project, It heped me lot. I found plen
 
 Then i got another project using Atmega2560 which also have SD card interface and file system requirement. I searched the internet for porting guide of FatFS for AVR. I found most of the implementations are outdated.
 
-Then i decided to port the Library using My previous experience in FatFS with STM32. I ported the code and build it with no errors. But it got some problems. Any helpis appreciated. 
+Then i decided to port the Library using My previous experience in FatFS with STM32.
+
+I ported the code and build it with no errors. But it got some problems. Any helpis appreciated. 
+
+# Steps I made
+
+1.  Downloaded ffsample from ELM-CHAN's website http://elm-chan.org/
+    ffsample link: http://elm-chan.org/fsw/ff/ffsample.zip
+    The ffsample includes examples for different platforms including avr. But i don't know which programming environment is used. Because i     
+    have started coding very recently and started avr coding in Atmel Studio.
+2.  Created a new project in atmel studio and added necessary files from ffsample_avr.Here is the list of files i included
+    ff.c
+    ff.h
+    ffconf.h
+    diskio.c
+    diskio.h
+    mmc_avr.h
+    mmc_avr_spi.c
+    ffunicode_avr.c
 

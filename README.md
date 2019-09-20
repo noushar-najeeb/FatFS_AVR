@@ -44,7 +44,7 @@ I ported the code and build it with no errors. But it got some problems. Any hel
     #define FF_FS_NORTC		1
 
 7.  Created a timer interrupt for 100HZ timer opertion.
-'''
+~~~
     void start_timer(void)
     {
 	    Start 100Hz system timer with TC0 */
@@ -54,4 +54,4 @@ I ported the code and build it with no errors. But it got some problems. Any hel
 	    TIMSK0 = (1<<OCIE0A);//Timer/Counter0 Output Compare Match A Interrupt Enable
 	    sei();
     }
-    '''
+    ~~~

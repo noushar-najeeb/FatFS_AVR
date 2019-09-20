@@ -27,4 +27,9 @@ I ported the code and build it with no errors. But it got some problems. Any hel
     mmc_avr_spi.c, 
     ffunicode_avr.c, 
 3.  In the main code included ff.h and diskio.h
+4.  Included #define DRV_MMC 1  in code to interface SD card
+5.  Switched to tiny buffer mode by Setting FF_FS_TINY value to 1 in ffconf.h
+    #define FF_FS_TINY		1
+6.  I'm not using any RTC and Time Stamp functions so i set FF_FS_NORTC value to 1 
+    #define FF_FS_NORTC		1
 

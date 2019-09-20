@@ -18,7 +18,7 @@ I ported the code and build it with no errors. But it got some problems. Any hel
     The ffsample includes examples for different platforms including avr. But i don't know which programming environment is used. Because i     
     have started coding very recently and started avr coding in Atmel Studio.
 2.  Created a new project in atmel studio and added necessary files from ffsample_avr.Here is the list of files i included
-    ff.c
+    ff.c\n
     ff.h
     ffconf.h
     diskio.c

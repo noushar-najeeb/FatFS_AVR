@@ -2,7 +2,7 @@
  * AVR_SD_CARD.c
  *
  * Created: 19-09-2019 20:52:13
- * Author : jihas
+ * Author : Noushar Najeeb
  */ 
 #define F_CPU 16000000UL
 #define DRV_MMC 1
@@ -15,15 +15,9 @@ FATFS fs;
 FIL fil;
 FRESULT fresult;
 char buffer[256];
-char buffer1[100];
-UINT br,bw;	//file read/write count
-//capacity related functions
 FATFS *pfs;
 DWORD fre_clust;
 unsigned long total, free_space;
-
-
-unsigned char temp;
 
 void Serial_begin(uint32_t BAUDRATE){
 	uint32_t BAUD_PRESCALLER;
@@ -57,7 +51,7 @@ void Serial_println(char* StringPtr){
 	while(*StringPtr != 0x00){
 		Serial_write(*StringPtr);
 	StringPtr++;}
-	Serial_write(' ');
+	Serial_write('\n');
 }
 
 uint8_t Serial_available(){
@@ -66,7 +60,7 @@ uint8_t Serial_available(){
 
 int main(void)
 {
-    Serial_begin(9600);
+    	Serial_begin(9600);
 	Serial_println("Staring...");
 	_delay_ms(500);
 	fresult=f_mount(&fs,"",0);
@@ -94,8 +88,8 @@ int main(void)
 			Serial_println("Error creating file");
 		}
 	}
-    while (1) 
-    {
-    }
+    	while (1) 
+    	{
+    	}
 }
 

@@ -9,7 +9,7 @@ Then i got another project using Atmega2560 which also have SD card interface an
 
 Then i decided to port the Library using My previous experience in FatFS with STM32.
 
-I ported the code and build it with no errors. But it got some problems. Any helpis appreciated. 
+I ported the code and build it with no errors. But it have some bugs. I'm trying to figure out the problem.May be you can help me fix the problem.  
 
 # Steps I made
 

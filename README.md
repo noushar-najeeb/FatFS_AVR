@@ -11,7 +11,7 @@ Then i decided to port the Library using My previous experience in FatFS with ST
 
 I ported the code and build it with no errors. But it have some bugs. I'm trying to figure out the problem.May be you can help me fix the problem.  
 
-# Steps I made
+# Steps taken
 
 1.  Downloaded ffsample from ELM-CHAN's website http://elm-chan.org/
     ffsample link: http://elm-chan.org/fsw/ff/ffsample.zip
